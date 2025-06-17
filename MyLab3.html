@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyLab3 Website</title>
+  <style>
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      z-index: 100;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      top: 10px;
+    }
+
+    /* Navigation bar - using flex */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-family: sans-serif;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      padding: 40px;
+    }
+
+    /* Images styling (box model) */
+    img {
+      border: 2px solid gray;
+      padding: 10px;
+      border-radius: 12px;
+      max-width: 100%;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      border-color: #007BFF;
+    }
+
+    /* Grid for Gallery section */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    /* Flex for About section */
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* nth-child example */
+    .grid img:nth-child(even) {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to Main Content</a>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <main id="main">
+    <!-- Home Section -->
+    <section id="home">
+      <h1>Welcome to My Website</h1>
+      <img src="https://via.placeholder.com/400x200" alt="Welcome image">
+      <p>This is the homepage. Enjoy the layout and design!</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <h1>Image Gallery</h1>
+      <div class="grid">
+        <img src="https://via.placeholder.com/200" alt="Gallery image 1">
+        <img src="https://via.placeholder.com/200" alt="Gallery image 2">
+        <img src="https://via.placeholder.com/200" alt="Gallery image 3">
+        <img src="https://via.placeholder.com/200" alt="Gallery image 4">
+        <img src="https://via.placeholder.com/200" alt="Gallery image 5">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h1>About Me</h1>
+      <div class="flex">
+        <img src="https://via.placeholder.com/150" alt="About image">
+        <p>Hello! I love building web pages and designing beautiful sites. I use HTML, CSS, and JavaScript to make things awesome.</p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
